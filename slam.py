@@ -25,7 +25,7 @@ class Slam:
         
         # lidar
         self.lidar_angles = lidar_angles 
-        self.startingAng = startingAngle
+        self.startingAngle = startingAngle
         
         # particle filter
         self.n_particles = n_particles  # number of particles
@@ -155,7 +155,7 @@ class Slam:
     
   
     def __pol2cart(self, radius, theta):
-        theta = np.arange(self.startingAng, -self.startingAng, -2 * self.startingAng / len(radius)) + theta
+        theta = np.arange(self.startingAngle, -self.startingAngle, -2 * self.startingAngle / len(radius)) + theta
         x, y = radius * np.cos(theta), radius * np.sin(theta)
         return x, y
     
